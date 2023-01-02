@@ -8,7 +8,7 @@ function jpics_install()
   $result = pwg_query('SHOW COLUMNS FROM `'.$prefixeTable.'images` LIKE "is_archived";');
   if (!pwg_db_num_rows($result))
   {     
-    pwg_query('ALTER TABLE `'.$prefixeTable .'images` ADD `is_archived` BOOL DEFAULT 0;');
+    pwg_query('ALTER TABLE `'.$prefixeTable .'piwigo_images` ADD `is_archived` BOOL DEFAULT 0;');
   }
 }
 ?>
